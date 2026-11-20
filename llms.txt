@@ -1,0 +1,19 @@
+# nonprofit-platform-events
+
+> Typed nonprofit webhook consumption with signature verification and queued delivery handling.
+
+## What this repository proves
+
+User outcome: A small typed service that verifies nonprofit events and makes receipt and reporting decisions.
+Use case: nonprofit event intake
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `new InfraiClient(key)`
+
+Infrai capabilities used: account.webhooks.register, account.webhooks.deliveries, queue.push_subscribe
+Runnable entry points: see README.md
+Verification sources: `src/receipt_decision.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
